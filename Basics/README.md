@@ -29,3 +29,10 @@ containing class.
 3. `protected`
 - This access modifer is similar to private, except that protected members can be accessed using their deriving classess
 (inheritance) 
+
+
+
+## Advanced Types
+- `|` represents union 
+- `&` represents Intersection
+- Refer to examples in folder 06.
