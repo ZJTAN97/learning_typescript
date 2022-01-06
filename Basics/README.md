@@ -15,3 +15,17 @@
 - any
 - Literal (literally a specific string)
 - undefined
+
+
+## Classes
+1. `public`
+- by default, all members of a class in TypeScript are public. Public members can be accessed anywhere
+without any restrictions
+
+2. `private`
+- This access modifier ensures that class members are visible only to that class and are not accessible outside the
+containing class.
+
+3. `protected`
+- This access modifer is similar to private, except that protected members can be accessed using their deriving classess
+(inheritance) 
