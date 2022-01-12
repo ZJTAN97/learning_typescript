@@ -1,3 +1,5 @@
+console.log('---- 05 Interfaces ------')
+
 interface PersonInterface {
     readonly id: number;
     name: string;
