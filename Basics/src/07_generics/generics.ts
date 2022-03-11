@@ -69,7 +69,6 @@ extractAndConvert({Name: "Docker"}, "Name");
 
 
 
-
 // 5. Generic Classes
 
 class DataStorage<T extends string | number> {
@@ -96,3 +95,33 @@ textStorage.getItems();
 const numberStorage = new DataStorage<number>();
 numberStorage.addItem(5);
 numberStorage.addItem(10);
+
+
+
+// 6. Generic Utility Types
+
+// https://www.typescriptlang.org/docs/handbook/utility-types.html
+
+// Partial Type
+interface CourseGoal {
+    title: string;
+    description: string;
+    completeUntil: Date;
+}
+
+function createGourseGoal(
+    title: string, 
+    description: string, 
+    completeUntil: Date
+): CourseGoal {
+    let courseGoal: Partial<CourseGoal> = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.completeUntil = completeUntil;
+    return courseGoal as CourseGoal;
+}
+
+
+// Read only type
+const namesCannotChange: Readonly<string []> = ["max", "anna"];
+// cannot push, pop etc
