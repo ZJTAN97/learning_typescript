@@ -3,19 +3,9 @@ interface Coordinate {
     y: number;
 }
 
-function parseCoordinateFromObject(obj: Coordinate): Coordinate {
-    return {
-        ...obj,
-    }
-}
-
-function parseCoordinateFromNumbers(x: number, y: number): Coordinate {
-    return {
-        x,
-        y,
-    }
-}
-
+/**
+ * Function overload example 
+ */
 function parseCoordinate(str: string): Coordinate;
 function parseCoordinate(obj: Coordinate): Coordinate;
 function parseCoordinate(x: number, y: number): Coordinate;
@@ -48,4 +38,4 @@ function parseCoordinate(arg1: unknown, arg2?: unknown): Coordinate {
 
 console.log(parseCoordinate(10, 20));
 console.log(parseCoordinate({x: 10, y: 20}));
-console.log(parseCoordinate("x:12, y:22"));
+console.log(parseCoordinate("x:12,y:22"));
