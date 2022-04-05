@@ -23,3 +23,7 @@ export const fetchData = (url: string): Promise<string> => {
 function introduce(salutaion: string, ...names: string[]): string {
     return `${salutaion} ${names.join(" ")}`;
 }
+
+export function getName(user: { first: string; last: string }): string {
+    return `${user?.first ?? "first"} ${user?.last ?? "last"}`;
+}
