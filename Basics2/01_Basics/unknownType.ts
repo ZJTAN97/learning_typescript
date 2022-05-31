@@ -72,3 +72,15 @@ function deserializeLocalStorage(key: string): Result {
 		value,
 	};
 }
+
+const result = deserializeLocalStorage("dark_mode");
+
+if(result.success) {
+    const darkModeEnabled = result.value;
+
+    if(typeof darkModeEnabled === "boolean") {
+        console.log(darkModeEnabled)
+    }
+} else {
+    console.error(result.error);
+}
