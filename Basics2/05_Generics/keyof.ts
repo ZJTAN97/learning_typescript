@@ -24,21 +24,21 @@ interface EventMap {
 // TODO:
 // review this example on ams-frontend input component
 
-function sendEvent<Name extends keyof EventMap>(
+function sendEvents<Name extends keyof EventMap>(
 	name: Name,
 	data: EventMap[Name]
 ): void {
 	console.log([name, data]);
 }
 
-sendEvent("addToCart", {
+sendEvents("addToCart", {
 	productID: "foo",
 	user: "baz",
 	quantity: 1,
 	time: 10,
 });
 
-sendEvent("checkout", {
+sendEvents("checkout", {
     time: 10,
     user: "fee"
 })
