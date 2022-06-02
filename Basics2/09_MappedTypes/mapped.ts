@@ -48,3 +48,7 @@ listenToObject(lg, {
 });
 
 type DogInfoListeners = Listeners<DogInfo>;
+
+// TO HELP UNDERSTAND
+// imagine all the methods that come for "free" upon writing your variable names when you
+// use libraries/frameworks in python
